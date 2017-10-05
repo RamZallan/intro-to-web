@@ -40,7 +40,7 @@ body {
     background: $slide-bg-color;
     outline: $slide-border-size solid $accent-color;
     outline-offset: -$slide-border-size;
-    text-align: center;
+    text-align: left;
     & .content {
         width: 100%;
         max-width: 1200px;
@@ -49,7 +49,7 @@ body {
     & ul {
         font-size: 1.75rem;
         text-align: left;
-        line-height: 2;
+        line-height: 1.75;
         &:first-of-type li {
             margin-bottom: 20px;
         }
@@ -57,6 +57,10 @@ body {
             font-size: 0.8em;
             line-height: 1;
         }
+    }
+    & img {
+        width: 100%;
+        margin: 20px 0 ;
     }
 }
 
@@ -75,6 +79,7 @@ pre {
     font-family: 'Roboto Mono', monospace;
     text-align: left;
     font-size: 1.25em;
+    margin: 10px 0!important;
     & code {
         width: 100%;
         margin: 0 auto;
@@ -87,6 +92,11 @@ pre {
         }
         & strong {
             font-weight: 900;
+            margin: 0 20px;
+        }
+        & small {
+            font-size: 1em;
+            font-weight: 100;
             margin: 0 20px;
         }
     }

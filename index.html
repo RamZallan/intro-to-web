@@ -15,15 +15,17 @@
 &lt;html&gt;
     &lt;head&gt;
         &lt;style&gt;
-            .code-block {
-                size: larger;
+            .slide:first-child {
+                display: currently;
             }
         &lt;/style&gt;
     &lt;/head&gt;
-
     &lt;body&gt;
-        &lt;h1 id="intro"&gt;<strong>An Intro to Web Development:</strong>&lt;/h1&gt;
+        &lt;a href=&quot;<small>ramzallan.me/intro-to-web</small>&quot;&gt;<strong>
+            An Intro to Web Development:</strong>
+        &lt;/a&gt;
         &lt;h2 class="subtitle"&gt;<strong>Babby's First Website!</strong>&lt;/h2&gt;
+        &lt;p id="author"&gt;<strong>By Ram Zallan</strong>&lt;/p&gt;
     &lt;/body&gt;
 &lt;/html&gt;</code></pre>
             </div>
@@ -45,6 +47,232 @@
                         JavaScript: The electricity, gas, heating, and mailbox
                         <ul><li>Additional functionality</li></ul>
                     </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h1>HTML: Layout</h1>
+                <pre><code class="larger">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;!-- Metadata, styles --&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;!-- Elements, scripts --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h1>HTML: Elements</h1>
+                <p data-height="600" data-theme-id="31371" data-slug-hash="eGBVZr" data-default-tab="html,result" data-user="ramzallan" data-embed-version="2" data-pen-title="HTML Elements" class="codepen">See the Pen <a href="https://codepen.io/ramzallan/pen/eGBVZr/">HTML Elements</a> by Ram Zallan (<a href="https://codepen.io/ramzallan">@ramzallan</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h1>HTML: Semantics</h1>
+                <pre><code class="larger">&lt;header&gt;
+    &lt;nav&gt;<small>...</small>&lt;/nav&gt;
+</small>&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;section&gt;<small>...</small>&lt;/section&gt;
+    &lt;section&gt;
+        &lt;aside&gt;<small>...</small>&lt;/aside&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;<small>...</small>&lt;footer&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h1>HTML: Properties</h1>
+                <pre><code class="larger html">&lt;div class="foo"&gt;<small>...</small>&lt;/div&gt;
+&lt;p class="foo"&gt;<small>...</small>&lt;/p&gt;
+
+&lt;img id="bar" src="https:&#47;&#47;i.imgur.com/geFTqyR.gifv" /&gt;
+
+&lt;a href="https://csh.rit.edu" title="CSH"&gt;CSH&lt;/a&gt;
+
+&lt;p style="font-weight: bolder; color: red;"&gt;<small>...</small>&lt;/p&gt;
+
+&lt;button disabled&gt;<small>...</small>&lt;/button&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h1>CSS: Selectors</h1>
+
+                <pre><code class="css">button { /* element */ }
+
+.foo { /* class */ }
+
+#bar { /* id */ }
+
+p.baz#cras { /* mixing */ }
+
+.nunc #leo { /* nesting */ }
+
+a[href^="https"] { /* attributes */ }
+
+a:hover { /* interactive */ }
+
+div::after { /* psuedo-elements */ }</code></pre>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h1>CSS: Properties</h1>
+
+                <pre><code>foo {
+    color: red;
+    background: blue; /* or url("img.jpg") */
+
+    border: 1px solid black;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+
+    width: 80%; /* and/or height; */
+    display: inline;
+    position: absolute;
+    top: 10px; /* and/or right, bottom, left */
+
+    font-size: 1em;
+    text-align: center; /* or right, left, justify, etc. */
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h1>CSS: Values</h1>
+
+                <pre><code class="css">/* sizing */
+10px, 2em, 20%, 50vh, 40 vmin
+
+/* colors */
+red, #ff0000, #f00, rgb(255, 0, 0), rgba(255, 0, 0, 0.25)
+
+/* display */
+none, inline, block, inline-block, table, flex
+
+/* position */
+static, absolute, fixed, sticky
+
+/* border styles */
+solid, dotted, dashed, inset, groove
+</code></pre>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h1>JavaScript: Basic Syntax</h1>
+
+                <pre><code class="javascript">const letters = ['H', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd'];
+const greetWorld = () => {
+    // Greets the world.
+    for (let i = 0; i < letters.length; i++) {
+        console.log(letters[i]);
+    }
+}
+greetWorld();</code></pre>
+<pre><code class="javascript">const goodLanguages = {
+    'javascript': "yeah!",
+    'java': "also yeah, but they aren't the same"
+};
+if ('javascript' in goodLanguages) {
+    console.log("cool");
+}
+</code></pre>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h1>JavaScript: Uses</h1>
+                <pre><code class="html">&lt;a id="link" href="http://ehouse.rit.edu"&gt;<small>Engineering House</small>&lt;/a&gt;</code></pre>
+
+                <pre><code class="javascript">document.getElementById("link").addEventListener("click", function(event) {
+    event.preventDefault();
+    location.href = "https://csh.rit.edu";
+});</code></pre>
+                <br>
+                <pre><code class="html">&lt;button id="submit"&gt;<small>Submit Form</small>&lt;/button&gt;</code></pre>
+                <pre><code class="javascript">document.getElementById("submit").addEventListener("click", function(e) {
+    e.preventDefault();
+    doSomethingWith(document.getElementById("name").value);
+});</code></pre>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h1>Good Practices</h1>
+
+                <pre><code class="console">$ tree project/
+├── index.html
+├── css/
+│   └── styles.css
+└── js/
+    └── scripts.js
+</code></pre>
+                <pre><code>&lt;head&gt;
+    ...
+    &lt;link rel="stylesheet" href="/css/styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    ...
+    &lt;script src="/js/scripts.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h1>nc.me</h1>
+                <img src="images/nc_me.png" alt="NameCheap DNS" />
+                <img src="images/nc_dns.png" alt="NameCheap DNS" />
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h1>GitHub Pages</h1>
+                                <pre><code class="console">$ cd /path/to/username.github.io &amp;&amp; cat CNAME
+your-url.me
+
+$ git add index.html css/ js/ CNAME
+$ git commit -m "Made site"
+$ git push</code></pre>
+            <img src="images/gh_pages.png" alt="Github Pages Settings" />
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h1>Resources</h1>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+                    <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                    <li><a href="https://codepen.io/">CodePen</a></li>
+                    <li><a href="https://github.com/computersciencehouse/csh-material-bootstrap">CSH Material Bootstrap</a></li>
+                    <li><a href="https://nc.me/">NameCheap for Education</a></li>
+                    <li><a href="https://pages.github.com/">GitHub Pages</a></li>
+                    <li><a href="https://www.zoho.com/mail/">Zoho Mail</a></li>
+                    <li><a href="mailto:ram@ramzallan.me">Me</a></li>
                 </ul>
             </div>
         </div>
